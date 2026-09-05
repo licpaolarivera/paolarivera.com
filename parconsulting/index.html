@@ -228,6 +228,41 @@
 
   /* ===== SERVICIOS: fondo VERDE ===== */
   .services-section{background:var(--verde);color:var(--papel);}
+
+  /* ===== SERVICIO DESTACADO (Emprendedores) ===== */
+  .featured-service{
+    background:rgba(247,245,238,0.06);
+    border:1px solid rgba(238,233,222,0.22);
+    border-radius:14px;
+    padding:52px;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:48px;
+  }
+  .featured-service .tag{font-family:'Playfair Display',serif;font-size:13px;letter-spacing:0.2em;color:var(--oro);text-transform:uppercase;margin-bottom:14px;}
+  .featured-service h3{font-size:clamp(26px,3vw,34px);margin-bottom:14px;color:var(--papel);}
+  .featured-service .service-for{color:var(--oro);font-size:16px;font-style:italic;font-family:'Playfair Display',serif;margin-bottom:20px;}
+  .featured-service .blurb{font-size:16px;color:#e8efe9;line-height:1.65;margin-bottom:16px;}
+  .featured-service .pull{font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:var(--papel);font-size:17px;line-height:1.5;margin-bottom:6px;}
+  .featured-check{background:rgba(0,0,0,0.16);border-radius:10px;padding:32px 30px;}
+  .featured-check ul{list-style:none;margin-bottom:22px;}
+  .featured-check li{position:relative;padding-left:26px;margin-bottom:13px;font-size:15.5px;color:#e8efe9;}
+  .featured-check li::before{content:'✓';position:absolute;left:0;color:var(--oro);}
+  .featured-result{font-size:15px;font-style:italic;color:var(--oro);border-top:1px solid rgba(238,233,222,0.22);padding-top:18px;margin-bottom:24px;}
+  .featured-service .btn{align-self:flex-start;}
+  @media(max-width:900px){.featured-service{grid-template-columns:1fr;padding:34px 26px;}}
+
+  /* ===== SERVICIO SECUNDARIO (Empresas) ===== */
+  .services-secondary{background:#f0ede2;}
+  .services-secondary .wrap{max-width:760px;}
+  .services-secondary .tag{font-family:'EB Garamond',serif;font-size:12px;letter-spacing:0.24em;color:var(--burdeos);text-transform:uppercase;margin-bottom:12px;}
+  .services-secondary h3{font-size:26px;margin-bottom:16px;}
+  .services-secondary p{font-size:16px;color:#4a423a;line-height:1.65;margin-bottom:14px;}
+  .services-secondary ul{list-style:none;margin:22px 0;columns:2;column-gap:32px;}
+  .services-secondary ul li{position:relative;padding-left:24px;margin-bottom:12px;font-size:15.5px;color:#3a332c;break-inside:avoid;}
+  .services-secondary ul li::before{content:'✓';position:absolute;left:0;color:var(--burdeos);}
+  .services-secondary .note{font-size:14.5px;color:#6b6255;font-style:italic;margin:18px 0 26px;}
+  @media(max-width:600px){.services-secondary ul{columns:1;}}
   .services-section .section-head p:not(.eyebrow){color:#cdd9d2;}
   .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(247,245,238,0.14);}
   .service-card{background:var(--verde);padding:44px 38px;display:flex;flex-direction:column;}
@@ -504,40 +539,54 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Servicios</p>
-        <h2 style="color:var(--papel)">Diagnóstico + Plan de Acción<br>Consultoría Estratégica</h2>
+        <h2 style="color:var(--papel)">Claridad para decidir.<br>Estrategia para avanzar.</h2>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <p class="service-num">Para emprendedores</p>
-          <h3>Diagnóstico + Plan de Acción</h3>
-          <p class="service-for">Un proceso de un mes para pasar de la confusión a un plan concreto.</p>
-          <p class="blurb">Analizo integralmente tu idea, proyecto o negocio, identifico qué está fallando, qué falta y qué debes priorizar. Después construimos un plan estratégico de 3 a 6 meses para que sepas qué hacer, cómo, cuándo y por qué.</p>
-          <ul class="service-list">
-            <li>Análisis y diagnóstico integral</li>
-            <li>Identificación de puntos críticos</li>
-            <li>Plan de acción priorizado</li>
-            <li>Recomendación de herramientas, tiempos y costes</li>
-            <li>2 sesiones en directo, grabadas</li>
-            <li>Acceso a WhatsApp durante el proceso</li>
-          </ul>
-          <a class="btn btn-primary" href="#agenda">Quiero mi diagnóstico</a>
+      <div class="featured-service">
+        <div>
+          <p class="tag">Para emprendedores</p>
+          <h3>Claridad + Diagnóstico + Plan de Acción</h3>
+          <p class="service-for">Un proceso de 6 semanas para pasar de la confusión a la claridad, y de la claridad a la acción.</p>
+          <p class="blurb">Analizo contigo tu idea, proyecto o negocio para entender qué está pasando realmente, qué has hecho hasta ahora y qué está frenando el siguiente paso.</p>
+          <p class="blurb">Definimos juntos, o redefinimos, el objetivo y, a partir de ahí, construyo un plan de acción priorizado de 3 a 6 meses, adaptado a tu realidad, tus recursos y el momento de tu negocio.</p>
+          <p class="pull">Pero no quiero darte simplemente una lista de cosas que hacer.</p>
+          <p class="pull">Quiero que entiendas por qué hacerlas, en qué orden y con qué criterio tomar las siguientes decisiones.</p>
         </div>
-        <div class="service-card">
-          <p class="service-num">Para empresas</p>
-          <h3>Consultoría Estratégica</h3>
-          <p class="service-for">Cuando el negocio ya funciona, el problema suele ser más complejo.</p>
-          <p class="blurb">Analizo estrategia, operación, finanzas, procesos y equipo como partes de un mismo sistema. Identifico dónde se está perdiendo eficiencia, margen o capacidad de crecimiento, diseño un plan transversal y acompaño su implementación.</p>
-          <ul class="service-list">
-            <li>Diagnóstico integral</li>
-            <li>Plan de acción interárea y priorizado</li>
-            <li>Formación de equipo</li>
-            <li>Seguimiento de la ejecución</li>
-            <li>Ajustes durante el proceso</li>
-            <li>Trato directo, sin intermediarios</li>
+        <div class="featured-check">
+          <ul>
+            <li>Análisis previo de tu proyecto y situación actual</li>
+            <li>Diagnóstico integral y definición del objetivo</li>
+            <li>Plan de acción personalizado de 3 a 6 meses</li>
+            <li>Prioridades, herramientas, tiempos y próximos pasos</li>
+            <li>3 sesiones individuales de consultoría, grabadas</li>
+            <li>Documentos de diagnóstico y plan de acción</li>
+            <li>Seguimiento de implementación</li>
+            <li>Acceso directo por WhatsApp y email durante todo el proceso</li>
           </ul>
-          <a class="btn btn-primary" href="#agenda">Hablemos de tu empresa</a>
+          <p class="featured-result">Resultado: menos ruido, más claridad y un camino concreto para avanzar con criterio y confianza.</p>
+          <a class="btn btn-primary" href="#agenda">Quiero ordenar mi negocio</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIO SECUNDARIO: EMPRESAS ===== -->
+  <section class="services-secondary">
+    <div class="wrap">
+      <p class="tag">Para empresas</p>
+      <h3>Consultoría Estratégica</h3>
+      <p>Cuando el negocio ya funciona, hacer más no siempre significa crecer mejor.</p>
+      <p>Trabajo con empresas que necesitan una mirada externa para identificar qué está frenando el crecimiento, la rentabilidad o la eficiencia del negocio.</p>
+      <p>Analizo estrategia, marketing, ventas, finanzas, procesos y operación como partes de un mismo sistema para detectar dónde intervenir y qué priorizar.</p>
+      <ul>
+        <li>Diagnóstico transversal del negocio</li>
+        <li>Identificación de puntos críticos</li>
+        <li>Estrategia y plan de acción priorizado</li>
+        <li>Optimización de procesos y recursos</li>
+        <li>Acompañamiento en la implementación</li>
+        <li>Trabajo directo con dirección y equipos</li>
+      </ul>
+      <p class="note">Cada empresa requiere un diagnóstico diferente. Por eso, este servicio se diseña a medida según el contexto, los objetivos y la complejidad del negocio.</p>
+      <a class="btn btn-outline" href="#agenda">Hablemos de tu empresa</a>
     </div>
   </section>
 
